@@ -20,7 +20,7 @@ export class DonationPage implements OnInit {
   amony="aminnnna";
   
   ngOnInit() {
-    // this.donations_info.furniture = "jjjaajjaajjj"
+    this.donations_info.furniture = "jjjaajjaajjj"
   }
   
   submit(){
