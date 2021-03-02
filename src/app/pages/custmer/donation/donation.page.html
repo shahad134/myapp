@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>donation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-list>
+    <ion-label>نوع الاثاث</ion-label>
+    <ion-input [(ngModel)]="donations_info.furniture"></ion-input> 
+    <ion-label>نوع اث</ion-label>
+    <ion-input [(ngModel)]="donations_info.clothes"></ion-input>
+  </ion-list> -->
+<div *ngIf="!donations_info">
+  {{ amony }}
+</div>
+  <!-- {{donations_info["furniture"]}} -->
+
+  <ion-button (click)="submit()" mode="ios" expand="block"  color="green" fill="outline" class="ion-margin-top" >
+      ارسال
+  </ion-button>
+</ion-content>

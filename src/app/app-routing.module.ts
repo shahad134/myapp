@@ -4,12 +4,34 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
+     // path: '',
+    loadChildren: () => import('./pages/auth/login/login.module').then( m => m.LoginPageModule)
+    // redirectTo: 'folder/Inbox',
+    // pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
+    path: 'folder/:id', 
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/auth/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/auth/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'donations',
+    loadChildren: () => import('./pages/donations/donations.module').then( m => m.DonationsPageModule)
+  },
+  {
+    path: 'landing',
+    loadChildren: () => import('./pages/landing/landing.module').then( m => m.LandingPageModule)
+  },
+  {
+    path: 'donation',
+    loadChildren: () => import('./pages/custmer/donation/donation.module').then( m => m.DonationPageModule)
   }
 ];
 

@@ -1,0 +1,36 @@
+<ion-header  class="ion-no-border" >
+  <ion-toolbar>
+    <div   style="height: 50px"></div> 
+    <div>
+      <div dir="rtl" class="title-icon-right">
+        <img  src="../../../../assets/tharwat1.png"   width="110px" style="display:inline-block" height="90px"/>
+        <ion-title class="title-icon-right"  style="display:inline-block" ></ion-title>
+      </div>
+    
+          <ion-title class="title-icon-left"  style="display:inline-block" ></ion-title>
+      </div>
+      
+    <ion-title class="login">تسجيل الدخول </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="login(form)" method="post">
+    <ion-item>
+      <ion-label position="floating">email</ion-label>
+      <ion-input ngModel type="email" name="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input ngModel type="password" name="password"></ion-input>
+    </ion-item>
+  
+    <p text-right>Forgot Password?</p>
+  
+    <ion-button type="submit" expand="full" color="primary">Login</ion-button>
+  </form>
+
+  <p text-center>Don't have a account?</p>
+  <ion-button expand="full" color="danger" (click)="registerModal()">Register</ion-button>
+</ion-content>
