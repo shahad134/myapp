@@ -21,7 +21,7 @@ export class AuthService {
     return this.http.post<any>(this.env.API_URL + 'auth/login',
       {email: email, password: password}
     ).pipe(
-      tap(token => {
+      tap(token => {  
         this.storage.setItem('token.access_token', token.access_token)
         .then(
           () => {

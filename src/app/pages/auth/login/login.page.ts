@@ -40,7 +40,7 @@ export class LoginPage implements OnInit {
   }
 
   checked : boolean = false;// amon
-	
+	rot :string;
   rememberMe(): void {
   	this.checked = !this.checked;
   	// console.log("checked: " + this.checked);//it is working !!!
@@ -63,6 +63,8 @@ export class LoginPage implements OnInit {
     this.authService.login(form.value.email, form.value.password).subscribe(
       data => {
         localStorage.setItem('token', data.access_token);
+       localStorage.setItem('is_admin', data.is_admin);
+
         this.alertService.presentToast("تم تسجيل الدخول");
         console.log(data)
       },
@@ -72,7 +74,9 @@ export class LoginPage implements OnInit {
       },
       () => {
         this.dismissLogin();
-        this.navCtrl.navigateRoot('/donation');
+       this.rot= localStorage.getItem('is_admin');
+
+        this.navCtrl.navigateRoot(this.rot);
       }
     );
   }

@@ -49,7 +49,9 @@ export class RegisterPage implements OnInit {
           },
           () => {
             this.dismissRegister();
-            this.navCtrl.navigateRoot('/donations');
+            // this.navCtrl.navigateRoot('/donations');
+            this.navCtrl.navigateRoot('/home');
+
           }
         );
         this.alertService.presentToast(data['message']);

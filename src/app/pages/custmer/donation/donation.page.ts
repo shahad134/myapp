@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Donations_info} from 'src/app/models/donations';
 import { AlertService } from 'src/app/services/alert.service';
-import { EnvService } from './../../../services/env.service';
-import{ HttpServiceService}  from './../../../services/http-service.service';
+import { EnvService } from '../../../services/env.service';
+import{ HttpServiceService}  from '../../../services/http-service.service';
 
 @Component({
   selector: 'app-donation',
@@ -11,7 +11,7 @@ import{ HttpServiceService}  from './../../../services/http-service.service';
 })
 export class DonationPage implements OnInit {
 
-  donations_info: Donations_info;
+  donations_info: Donations_info = new Donations_info ;
   constructor(
     private alertService: AlertService,
     private env: EnvService,
@@ -20,9 +20,29 @@ export class DonationPage implements OnInit {
   amony="aminnnna";
   
   ngOnInit() {
-    this.donations_info.furniture = "jjjaajjaajjj"
+   
   }
+  // ionViewWillEnter() {
+  //     this.httpService.makeGet('auth/receive_donation').subscribe(
+  //       donations_info => {
+  //         this.donations_info = donations_info
+  //         if(!this.donations_info){
+  //           this.donations_info = {
+  //             furniture :'',
+  //             clothes :''
+  //           }
+  //         }
+  //       },
+  //       error => {
+  //         console.log(error);
+  //       },
+  //       () => {
+          
+  //       }
+  //     );
+  //   }
   
+    
   submit(){
     let data = {
       donations_info: this.donations_info

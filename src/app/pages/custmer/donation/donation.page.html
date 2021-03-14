@@ -11,11 +11,41 @@
     <ion-label>نوع اث</ion-label>
     <ion-input [(ngModel)]="donations_info.clothes"></ion-input>
   </ion-list> -->
-<div *ngIf="!donations_info">
-  {{ amony }}
-</div>
-  {{donations_info["furniture"]}}
+  <ion-list>
+    <ion-select  [(ngModel)]="donations_info.furniture">
+      <ion-select-option value="أسرة">
+        أسرة </ion-select-option>
+      <ion-select-option value="كنب">
+        كنب</ion-select-option>
+      <ion-select-option value="board">
+        مجلس</ion-select-option>
+      <ion-select-option value="chair">كرسي</ion-select-option>
+      <ion-select-option value="table">طاولة</ion-select-option>
+      <ion-select-option value="abjoura">أبجورة</ion-select-option>
+      <ion-select-option value="artificial_flowers">ورد صناعي </ion-select-option>
+      <ion-select-option value="Clothes_hanger">شماعة ملابس </ion-select-option>
+      <ion-select-option value="Cupboards"> دواليب </ion-select-option>
+      <ion-select-option value="Kitchens">مطابخ </ion-select-option>
+      <ion-select-option value="Mattress">مرتبة سرير</ion-select-option>
+      <ion-select-option value="Rests"> مساند</ion-select-option>
+      <ion-select-option value="Wall_hangings">معلقات جدارية</ion-select-option>
+      <ion-select-option value="Ladder"> سلم صعود </ion-select-option>
+      <ion-select-option value="Bedrooms">غرفة نوم</ion-select-option>
+      <ion-select-option value="sofa">أريكة</ion-select-option>
+      <ion-select-option value="Dining table">طاولة طعام </ion-select-option>
+      <ion-select-option value="Coffee_table">طاولة قهوة</ion-select-option>
+      <ion-select-option value="TV_table">طاولة تلفزيون</ion-select-option>
+      <ion-select-option value="Side_tables">طاولات جانبية </ion-select-option>
+      <ion-select-option value="Brush">فرشة</ion-select-option>
+      <ion-select-option value="Felt_bed">لباد سرير</ion-select-option>
+      <ion-select-option value="Pillows">مخدات</ion-select-option>
+      <ion-select-option value="other">أخرى</ion-select-option>
+    </ion-select>
+    <ion-item >
+      <ion-input  dir="rtl" [(ngModel)] ="donations_info.clothes" placeholder="النوع"></ion-input>
+    </ion-item>
 
+</ion-list>
   <ion-button (click)="submit()" mode="ios" expand="block"  color="green" fill="outline" class="ion-margin-top" >
       ارسال
   </ion-button>

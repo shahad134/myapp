@@ -72,7 +72,9 @@ export class LoginPage implements OnInit {
       },
       () => {
         this.dismissLogin();
-        this.navCtrl.navigateRoot('/donations');
+        // this.navCtrl.navigateRoot('/donation');
+         this.navCtrl.navigateRoot('/home');
+
       }
     );
   }

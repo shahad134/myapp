@@ -32,6 +32,14 @@ const routes: Routes = [
   {
     path: 'donation',
     loadChildren: () => import('./pages/custmer/donation/donation.module').then( m => m.DonationPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then( m => m.AdminPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   }
 ];
 
