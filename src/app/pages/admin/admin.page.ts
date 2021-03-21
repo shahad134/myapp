@@ -36,6 +36,8 @@ export class AdminPage implements OnInit {
 
             }
           }
+          console.log(this.donation);
+          
 
  
           // console.log(this.furniture);

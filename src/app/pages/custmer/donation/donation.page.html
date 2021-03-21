@@ -1,18 +1,103 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>donation</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <!-- <ion-list>
-    <ion-label>نوع الاثاث</ion-label>
-    <ion-input [(ngModel)]="donations_info.furniture"></ion-input> 
-    <ion-label>نوع اث</ion-label>
-    <ion-input [(ngModel)]="donations_info.clothes"></ion-input>
-  </ion-list> -->
-  <ion-list>
-    <ion-select  [(ngModel)]="donations_info.furniture">
+  <ion-list> -->
+  
+      <!-- <ion-select [(ngModel)]="donations_info.furniture">
+      <ion-select-option value="أسرة">
+        أسرة </ion-select-option>
+      <ion-select-option value="كنب">
+        كنب</ion-select-option>
+      <ion-select-option value="مجلس">
+        مجلس</ion-select-option>
+      <ion-select-option value="كرسي">
+        كرسي</ion-select-option>
+      <ion-select-option value="طاولة">
+        طاولة</ion-select-option>
+      <ion-select-option value="أبجورة">
+        أبجورة</ion-select-option>
+      <ion-select-option value="ورد صناعي">
+        ورد صناعي </ion-select-option>
+      <ion-select-option value="شماعة ملابس">
+        شماعة ملابس </ion-select-option>
+      <ion-select-option value="دواليب"> 
+        دواليب </ion-select-option>
+      <ion-select-option value="مطابخ">
+        مطابخ </ion-select-option>
+      <ion-select-option value="مرتبة سرير">
+        مرتبة سرير</ion-select-option>
+      <ion-select-option value="مساند">
+         مساند</ion-select-option>
+      <ion-select-option value="Wall_hangings"> 
+        معلقات جدارية</ion-select-option>
+      <ioyutn-select-option value="Ladder"> 
+        سلم صعود </ion-select-option>
+      <ion-select-option value="Bedrooms">
+        غرفة نوم</ion-select-option>
+      <ion-select-option value="sofa">أريكة
+      </ion-select-option>
+      <ion-select-option value="Dining table">
+        طاولة طعام </ion-select-option>
+      <ion-select-option value="Coffee_table">
+        طاولة قهوة</ion-select-option>
+      <ion-select-option value="TV_table">
+        طاولة تلفزيون</ion-select-option>
+      <ion-select-option value="Side_tables">
+        طاولات جانبية </ion-select-option>
+      <ion-select-option value="Brush">
+        فرشة</ion-select-option>
+      <ion-select-option value="Felt_bed">
+        لباد سرير</ion-select-option>
+      <ion-select-option value="Pillows">
+        مخدات</ion-select-option>
+      <ion-select-option value="other">
+        أخرى</ion-select-option>
+    </ion-select> -->
+    <!-- <ion-list>
+      <ion-select  [(ngModel)]="donations_info.furniture">
+        <ion-select-option value="أسرة">
+          أسرة </ion-select-option>
+        <ion-select-option value="كنب">
+          كنب</ion-select-option>
+        <ion-select-option value="board">
+          مجلس</ion-select-option>
+        <ion-select-option value="chair">كرسي</ion-select-option>
+        <ion-select-option value="table">طاولة</ion-select-option>
+        <ion-select-option value="abjoura">أبجورة</ion-select-option>
+        <ion-select-option value="artificial_flowers">ورد صناعي </ion-select-option>
+        <ion-select-option value="Clothes_hanger">شماعة ملابس </ion-select-option>
+        <ion-select-option value="Cupboards"> دواليب </ion-select-option>
+        <ion-select-option value="Kitchens">مطابخ </ion-select-option>
+        <ion-select-option value="Mattress">مرتبة سرير</ion-select-option>
+        <ion-select-option value="Rests"> مساند</ion-select-option>
+        <ion-select-option value="Wall_hangings">معلقات جدارية</ion-select-option>
+        <ion-select-option value="Ladder"> سلم صعود </ion-select-option>
+        <ion-select-option value="Bedrooms">غرفة نوم</ion-select-option>
+        <ion-select-option value="sofa">أريكة</ion-select-option>
+        <ion-select-option value="Dining table">طاولة طعام </ion-select-option>
+        <ion-select-option value="Coffee_table">طاولة قهوة</ion-select-option>
+        <ion-select-option value="TV_table">طاولة تلفزيون</ion-select-option>
+        <ion-select-option value="Side_tables">طاولات جانبية </ion-select-option>
+        <ion-select-option value="Brush">فرشة</ion-select-option>
+        <ion-select-option value="Felt_bed">لباد سرير</ion-select-option>
+        <ion-select-option value="Pillows">مخدات</ion-select-option>
+        <ion-select-option value="other">أخرى</ion-select-option>
+      </ion-select>
+    <ion-item >
+      <ion-input  dir="rtl" [(ngModel)] ="donations_info.clothes" placeholder="النوع"></ion-input>
+    </ion-item>
+</ion-list> -->
+  <!-- <ion-button (click)="submit()" mode="ios" expand="block"  color="green" fill="outline" class="ion-margin-top" >
+      ارسال
+  </ion-button> -->
+<!-- </ion-content> -->
+<!-- <ion-list >
+  <form  [(ngModel)]="donations_info.furniture">
+    <ion-select>
       <ion-select-option value="أسرة">
         أسرة </ion-select-option>
       <ion-select-option value="كنب">
@@ -40,13 +125,272 @@
       <ion-select-option value="Felt_bed">لباد سرير</ion-select-option>
       <ion-select-option value="Pillows">مخدات</ion-select-option>
       <ion-select-option value="other">أخرى</ion-select-option>
-    </ion-select>
+    </ion-select> 
+  </form>
     <ion-item >
       <ion-input  dir="rtl" [(ngModel)] ="donations_info.clothes" placeholder="النوع"></ion-input>
     </ion-item>
+  </ion-list> -->
+ 
+  <!-- <ion-list>
+    <ion-item *ngFor="let entry of home_furniture" >
+      <ion-select  >
+        <ion-select-option>{{entry.val}}</ion-select-option>
+      </ion-select>
+      <ion-input slot="end">{{entry.isChecked}}</ion-input>
+      <ion-input slot="end">{{entry.isChecked}}</ion-input>
+    </ion-item>
+  </ion-list> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>donation</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
 
-</ion-list>
+  <!-- <ion-label color="primary" floating>معلومات الذكور والإناث التابعين</ion-label> -->
+  <ion-item *ngFor="let entry of item_qty">
+    <form #form="ngForm" (ngSubmit)="furniture(form)" method="post">
+      <ion-item>
+        <ion-label color="primary" floating>الاثاث المنزلي</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='number' placeholder="العدد "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حفظ 
+        </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          إضافة 
+        </ion-button>
+      <div *ngIf="entry != 1">
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حذف 
+        </ion-button>
+      </div>
+      </ion-item>
+    </form>
+  </ion-item>
+  
+  <ion-item *ngFor="let entry of item_qty">
+    <form #form="ngForm" (ngSubmit)="clothes(form)" method="post">
+      <ion-item>
+        <ion-label color="primary" floating>ملابس</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='number' placeholder="العدد "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حفظ 
+        </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          إضافة 
+        </ion-button>
+      <div *ngIf="entry != 1">
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حذف 
+        </ion-button>
+      </div>
+      </ion-item>
+    </form>
+  </ion-item>
+  <ion-item *ngFor="let entry of item_qty">
+    <form #form="ngForm" (ngSubmit)="dishes(form)" method="post">
+      <ion-item>
+        <ion-label color="primary" floating>الأواني المنزلية</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='number' placeholder="العدد "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حفظ 
+        </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          إضافة 
+        </ion-button>
+      <div *ngIf="entry != 1">
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حذف 
+        </ion-button>
+      </div>
+      </ion-item>
+    </form>
+  </ion-item>
+  <ion-item *ngFor="let entry of item_qty">
+    <form #form="ngForm" (ngSubmit)="electrical_tools(form)" method="post">
+      <ion-item>
+        <ion-label color="primary" floating>الأدوات الكهربائية</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='number' placeholder="العدد "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حفظ 
+        </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          إضافة 
+        </ion-button>
+      <div *ngIf="entry != 1">  
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حذف 
+        </ion-button>
+      </div>
+      </ion-item>
+    </form>
+  </ion-item>
+  <ion-item *ngFor="let entry of item_qty">
+    <form #form="ngForm" (ngSubmit)="baby_things(form)" method="post">
+      <ion-item>
+        <ion-label color="primary" floating> مستلزمات الأطفال </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='number' placeholder="العدد "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حفظ 
+        </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          إضافة 
+        </ion-button>
+      <div *ngIf="entry != 1">
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حذف 
+        </ion-button>
+      </div>
+      </ion-item>
+    </form>
+  </ion-item>
+  <ion-item *ngFor="let entry of item_qty">
+    <form #form="ngForm" (ngSubmit)="luxuries(form)" method="post">
+      <ion-item>
+        <ion-label color="primary" floating> الكماليات </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='number' placehol der="العدد "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حفظ 
+        </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          إضافة 
+        </ion-button>
+      <div *ngIf="entry != 1">
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حذف 
+        </ion-button>
+      </div>
+      </ion-item>
+    </form>
+  </ion-item>
+  
+  <ion-item *ngFor="let entry of item_qty">
+    <form #form="ngForm" (ngSubmit)="accessories_and_mobiles(form)" method="post">
+      <ion-item>
+        <ion-label color="primary" floating> إكسسوارات نسائيه وجوالات </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='number' placeholder="العدد "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حفظ 
+        </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          إضافة 
+        </ion-button>
+      <div *ngIf="entry != 1">
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حذف 
+        </ion-button>
+      </div>
+      </ion-item>
+    </form>
+  </ion-item>
+  <ion-item *ngFor="let entry of item_qty">
+    <form #form="ngForm" (ngSubmit)="medical_devices(form)" method="post">
+      <ion-item>
+        <ion-label color="primary" floating> أجهزة طبية </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='number' placeholder="العدد "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حفظ 
+        </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          إضافة 
+        </ion-button>
+      <div *ngIf="entry != 1">
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حذف 
+        </ion-button>
+      </div>
+      </ion-item>
+    </form>
+  </ion-item>
+  
+  <ion-item *ngFor="let entry of item_qty">
+    <form #form="ngForm" (ngSubmit)="miscellaneous(form)" method="post">
+      <ion-item>
+        <ion-label color="primary" floating> متفرقات </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input ngModel name='number' placeholder="العدد "></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حفظ 
+        </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          إضافة 
+        </ion-button>
+      <div *ngIf="entry != 1">
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+          حذف 
+        </ion-button>
+      </div>
+      </ion-item>
+    </form>
+  </ion-item>
+
+  
+ 
   <ion-button (click)="submit()" mode="ios" expand="block"  color="green" fill="outline" class="ion-margin-top" >
-      ارسال
+    ارسال
   </ion-button>
+  
 </ion-content>
