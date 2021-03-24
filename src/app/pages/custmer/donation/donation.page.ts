@@ -4,6 +4,7 @@ import { AlertService } from 'src/app/services/alert.service';
 import { EnvService } from '../../../services/env.service';
 import{ HttpServiceService}  from '../../../services/http-service.service';
 import { ModalController, NavController } from '@ionic/angular';
+
 import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-donation',
@@ -19,6 +20,8 @@ export class DonationPage implements OnInit {
     private env: EnvService,
     private httpService :HttpServiceService,
     private modalController: ModalController,
+    private navCtrl: NavController,
+
   ) { }
 
   
@@ -140,7 +143,6 @@ miscellaneous(form: NgForm){
     console.log(this.donations_info)
     this.httpService.post( 'auth/donations', data).subscribe(
       data => {
-      
         this.alertService.presentToast("تم حفظ البيانات بنجاح");
       },
       error => {
@@ -149,6 +151,8 @@ miscellaneous(form: NgForm){
       },
       () => {
         this.modalController.dismiss();
+        this.navCtrl.navigateForward('/info-connect');
+
       
       }
     )
