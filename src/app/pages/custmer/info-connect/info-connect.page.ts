@@ -5,6 +5,7 @@ import { EnvService } from '../../../services/env.service';
 import{ HttpServiceService}  from '../../../services/http-service.service';
 import { ModalController, NavController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-info-connect',
@@ -23,13 +24,15 @@ export class InfoConnectPage implements OnInit {
 
   ngOnInit() {
   }
-
+  
   submit(){
+    this.info_connect.birth_date = moment(this.info_connect.birth_date).format("YYYY-MM-DD");
+
     let data = {
       info_connect:this.info_connect
     }
     console.log(this.info_connect);
-    this.httpService.post('auth/infoconnect',data).subscribe(
+    this.httpService.post('auth/infoconnects',data).subscribe(
       data => {
         this.alertService.presentToast("تم حفظ البيانات بنجاح");
       },
