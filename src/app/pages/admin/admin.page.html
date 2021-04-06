@@ -1,18 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>admin</ion-title>
+    <!-- <ion-title>admin</ion-title> -->
   </ion-toolbar>
 </ion-header>
 <ion-list>
-  <div *ngFor ="let tag of donation">
-    <ion-label>
-    {{tag.furniture}}</ion-label>
+  <div  *ngFor ="let tag of donations_info">
+    <ion-row>
+      <ion-col>
+<p>{{tag.furniture}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+<p>{{tag.clothes}}</p>
+      </ion-col>
+    </ion-row>
     
-    {{tag.clothes}}
-
- <!-- <ion-label [(ngModel)]="donations_info.furniture"></ion-label> -->
-
 </div>
-</ion-list>
+<!-- <ul>
+<li *ngFor  ="let tag of donation" >
+  <ion-label>
+    {{tag}}</ion-label>
+</li></ul> -->
+</ion-list> 
 <ion-content>
     

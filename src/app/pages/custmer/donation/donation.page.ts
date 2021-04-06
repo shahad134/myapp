@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './donation.page.html',
   styleUrls: ['./donation.page.scss'],
 })
+
 export class DonationPage implements OnInit {
 
   //donations_info: Donations_info ;
@@ -29,13 +30,19 @@ export class DonationPage implements OnInit {
    
   }
   item_qty=[1];
-  item_qty2=[1];
 
+// let f1:furniture={
+// type:form.value.type,
+// number:form.value.number
+// }
   furniture(form: NgForm){
-  this.furniture_information.push(form.value.type)
+    
+this.furniture_information.push(form.value.type)
+
   this.furniture_information.push(form.value.number)
-   
-  }
+  
+    // })
+   }
   clothes(form: NgForm){
     this.clothes_information.push(form.value.type)
    this.clothes_information.push(form.value.number)
@@ -52,6 +59,7 @@ export class DonationPage implements OnInit {
  
 }
 baby_things(form: NgForm){
+
   this.baby_things_information.push(form.value.type)
  this.baby_things_information.push(form.value.number)
 }
@@ -115,7 +123,7 @@ miscellaneous(form: NgForm){
   clothes_information=[]
   dishes_information=[]
   electrical_tools_information=[]
-  baby_things_information=[]
+  baby_things_information=[] 
   luxuries_information=[]
   accessories_and_mobiles_information=[]
   medical_devices_information=[]
@@ -123,15 +131,15 @@ miscellaneous(form: NgForm){
 
   submit(){
 
-    this.donations_info.furniture=this.furniture_information;
-    this.donations_info.clothes=this.clothes_information;
-    this.donations_info.dishes=this.dishes_information;
-    this.donations_info.electrical_tools=this.electrical_tools_information;
-    this.donations_info.baby_things=this.baby_things_information;
-    this.donations_info.luxuries=this.luxuries_information;
-    this.donations_info.medical_devices=this.medical_devices_information;
-    this.donations_info.accessories_and_mobiles=this.accessories_and_mobiles_information;
-    this.donations_info.miscellaneous=this.miscellaneous_information;
+    this.donations_info.furniture=this.furniture_information.toString().replace(/"/g,"");
+    this.donations_info.clothes=this.clothes_information.toString() 
+    this.donations_info.dishes=this.dishes_information.toString();
+    this.donations_info.electrical_tools=this.electrical_tools_information.toString();
+    this.donations_info.baby_things=this.baby_things_information.toString();
+    this.donations_info.luxuries=this.luxuries_information.toString();
+    this.donations_info.medical_devices=this.medical_devices_information.toString();
+    this.donations_info.accessories_and_mobiles=this.accessories_and_mobiles_information.toString();
+    this.donations_info.miscellaneous=this.miscellaneous_information.toString();
     //this.donations_info.birth_date=this.birth_date_information;
 
     let data = {
@@ -139,11 +147,13 @@ miscellaneous(form: NgForm){
     }
    
     //this.donations_info.furniture=this.home_furniture;
-   //  this.donations_info.home_furniture = [this.home_furniture ];
+
     console.log(this.donations_info)
     this.httpService.post( 'auth/donations', data).subscribe(
       data => {
         this.alertService.presentToast("تم حفظ البيانات بنجاح");
+      
+      
       },
       error => {
         console.log(error.error);
@@ -169,3 +179,7 @@ miscellaneous(form: NgForm){
     // { val: 'دواليب', isChecked: 0 }
   // ];
 }
+// interface furniture{
+//   type:string,
+//   number:number
+// }

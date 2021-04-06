@@ -21,10 +21,7 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./pages/auth/register/register.module').then( m => m.RegisterPageModule)
   },
-  {
-    path: 'donations',
-    loadChildren: () => import('./pages/donations/donations.module').then( m => m.DonationsPageModule)
-  },
+ 
   {
     path: 'landing',
     loadChildren: () => import('./pages/landing/landing.module').then( m => m.LandingPageModule)
@@ -44,6 +41,12 @@ const routes: Routes = [
   {
     path: 'info-connect',
     loadChildren: () => import('./pages/custmer/info-connect/info-connect.module').then( m => m.InfoConnectPageModule)
+  },
+  
+ 
+  {
+    path: 'select-location',
+    loadChildren: () => import('./pages/custmer/select-location/select-location.module').then( m => m.SelectLocationPageModule)
   }
 ];
 

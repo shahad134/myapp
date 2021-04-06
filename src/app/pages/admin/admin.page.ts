@@ -13,8 +13,8 @@ import{ HttpServiceService} from './../../services/http-service.service';
 export class AdminPage implements OnInit {
   imports: [CommonModule]
 
-
-  donations_info: Donations_info = new Donations_info ;
+  //Donations_info:any;
+  donations_info: Donations_info;
   constructor(
     private alertService: AlertService,
     private env: EnvService,
@@ -23,20 +23,32 @@ export class AdminPage implements OnInit {
 
   ngOnInit() {
   }
-  donation=[]
+ //donation :any;
+ 
   ionViewWillEnter() {
     
       this.httpService.makeGet('auth/receive_donation').subscribe(
         donations_info => {
-          // this.donations_info = donations_info
-          for(let i =0; i <= donations_info.length; i++){
-            if(donations_info[i]){
-              this.donation.push(donations_info[i])
+         this.donations_info =donations_info
+         console.log(donations_info);
+       for(let i =0; i <= donations_info.length; i++){
+        console.log(donations_info[i]);
+        if(this.donations_info[i]){
+          JSON.stringify(donations_info[i])
+          
+         // this.donation=JSON.stringify(donations_info)
+             // return(donations_info[i])
+             //this.shahad.push(donations_info[i]);
               // this.clothes.push(donations_info[i].clothes)
+           } } 
+            // donations_info=JSON.stringify(donations_info[i]);
+          //console.log(donations_info);                      
+          },
+        //   console.log(this.donation);
+        //   c
+        // console.log(donations_info.donation);
+         
 
-            }
-          }
-          console.log(this.donation);
           
 
  
@@ -51,14 +63,15 @@ export class AdminPage implements OnInit {
         //     }
         //   }
           
-        // },
+        
         // console.log(donations_info);
         
-        // error => {
-        //   console.log(error);
-        // },
+        error => {
+          console.log(error);
+        },
         () => {
           
-        }
-           });
-    }}
+        })
+          //  });
+    }
+  }

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary" (click)="close()">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title>select-location</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <div #map id="map"></div>
+  <img src="../../assets//678111-map-marker-512.webp" class="icon" />
+
+  <ion-button (click)="getMapCenter()" color="danger">Select Location</ion-button>
+</ion-content>
