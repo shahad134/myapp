@@ -4,7 +4,6 @@ import { AlertService } from 'src/app/services/alert.service';
 import { EnvService } from '../../../services/env.service';
 import{ HttpServiceService}  from '../../../services/http-service.service';
 import { ModalController, NavController } from '@ionic/angular';
-
 import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-donation',
@@ -29,6 +28,8 @@ export class DonationPage implements OnInit {
   ngOnInit() {
    
   }
+
+
   item_qty=[1];
 
 // let f1:furniture={

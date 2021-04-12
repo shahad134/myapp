@@ -4,8 +4,8 @@
   </ion-toolbar>
 </ion-header>
 <ion-list>
-  <div  *ngFor ="let tag of donations_info">
-    <ion-row>
+  <div *ngFor ="let tag of donations_info">
+    <!-- <ion-row>
       <ion-col>
 <p>{{tag.furniture}}</p>
       </ion-col>
@@ -14,9 +14,16 @@
       <ion-col>
 <p>{{tag.clothes}}</p>
       </ion-col>
-    </ion-row>
-    
+    </ion-row> -->
+    <ion-item>
+      <ion-reorder slot="start"></ion-reorder>
+      <ion-label>
+        {{tag.furniture}}
+        <p>{{tag.clothes}}</p>
+      </ion-label>
+    </ion-item>
 </div>
+
 <!-- <ul>
 <li *ngFor  ="let tag of donation" >
   <ion-label>

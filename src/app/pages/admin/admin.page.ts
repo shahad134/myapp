@@ -30,11 +30,23 @@ export class AdminPage implements OnInit {
       this.httpService.makeGet('auth/receive_donation').subscribe(
         donations_info => {
          this.donations_info =donations_info
+         //this.put(this.donations_info.furniture,this.furniture)
          console.log(donations_info);
        for(let i =0; i <= donations_info.length; i++){
         console.log(donations_info[i]);
-        if(this.donations_info[i]){
-          JSON.stringify(donations_info[i])
+        if(this.donations_info[i] == "null"){
+       this.donations_info[i] ={
+            furniture:'',
+            clothes :''
+       }
+       
+       JSON.stringify(donations_info[i])
+
+      
+          
+          
+          
+
           
          // this.donation=JSON.stringify(donations_info)
              // return(donations_info[i])
@@ -43,7 +55,7 @@ export class AdminPage implements OnInit {
            } } 
             // donations_info=JSON.stringify(donations_info[i]);
           //console.log(donations_info);                      
-          },
+          
         //   console.log(this.donation);
         //   c
         // console.log(donations_info.donation);
@@ -56,13 +68,13 @@ export class AdminPage implements OnInit {
           // console.log(this.clothes);
           
         //if
-          // if(!this.donations_info){
-          //   this.donations_info = {
-          //     furniture :'',
-          //     clothes :''
+        //   if(!this.donations_info){
+        //  donations_info = {
+        //       furniture :'',
+        //       clothes :''
         //     }
         //   }
-          
+        },
         
         // console.log(donations_info);
         
