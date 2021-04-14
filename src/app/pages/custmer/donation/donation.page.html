@@ -12,7 +12,10 @@
     <ion-title dir='rtl'>قائمة التبرعات</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content [scrollEvents]="true"
+(ionScrollStart)="logScrollStart()"
+(ionScroll)="logScrolling($event)"
+(ionScrollEnd)="logScrollEnd()">
   <!-- <ion-label color="primary" floating>معلومات الذكور والإناث التابعين</ion-label> -->
   <ion-item  dir ='rtl' *ngFor="let entry of item_qty">
     <form #form="ngForm" (ngSubmit)="furniture(form)" method="post">
@@ -171,7 +174,6 @@
       </ion-item>
     </form>
   </ion-item>
-  
   <ion-item   dir='rtl' *ngFor="let entry of item_qty">
     <form #form="ngForm" (ngSubmit)="accessories_and_mobiles(form)" method="post">
       <ion-item>

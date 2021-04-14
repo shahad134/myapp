@@ -3,7 +3,10 @@
     <ion-title dir='rtl'>معلومات التواصل</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content   [scrollEvents]="true"
+(ionScrollStart)="logScrollStart()"
+(ionScroll)="logScrolling($event)"
+(ionScrollEnd)="logScrollEnd()">
 <ion-list dir='rtl'>
   <ion-label color="primary" floating> أسم من يسلم الطلب</ion-label> </ion-list>
  <ion-item>
@@ -25,7 +28,6 @@
       <ion-label>مساء</ion-label>
       <!-- <ion-icon name="heart"></ion-icon> -->
     </ion-segment-button>
-   
   </ion-segment>
  
 </ion-item>

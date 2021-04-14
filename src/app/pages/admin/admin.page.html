@@ -4,8 +4,8 @@
   </ion-toolbar>
 </ion-header>
 <ion-list>
-  <div *ngFor ="let tag of donations_info">
-    <!-- <ion-row>
+  <!-- <div *ngFor ="let tag of donations_info"> 
+    <ion-row>
       <ion-col>
 <p>{{tag.furniture}}</p>
       </ion-col>
@@ -14,21 +14,50 @@
       <ion-col>
 <p>{{tag.clothes}}</p>
       </ion-col>
-    </ion-row> -->
-    <ion-item>
+    </ion-row>
+  </div> -->
+    <!-- <ion-item>
       <ion-reorder slot="start"></ion-reorder>
       <ion-label>
         {{tag.furniture}}
         <p>{{tag.clothes}}</p>
       </ion-label>
-    </ion-item>
+    </ion-item> -->
+    <!-- <ion-list> -->
+      <!-- <div  *ngIf ="donations_info">
+        <ion-row>
+          <ion-col>
+    <p>{{furniture}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+    <p>{{clothes}}</p>
+          </ion-col>
+        </ion-row>
+        
+    </div> -->
+    <!-- </ion-list>  -->
+<!-- </div> -->
+<!-- <div *ngIf="donations_info.clothes!=null">
+  {{donations_info}}
+</div> -->
+<div *ngFor ="let tag of donations_info">
+  <div *ngIf="!tag">
+  <ion-row>
+  <ion-col>
+  <p> {{tag.furniture  === 'null' ? '' :tag.furniture }}</p>
+  </ion-col>
+  </ion-row>
 </div>
-
-<!-- <ul>
-<li *ngFor  ="let tag of donation" >
-  <ion-label>
-    {{tag}}</ion-label>
-</li></ul> -->
+  <div>
+  <ion-row>
+  <ion-col>
+ <p>{{tag.clothes === 'null' ? '' : tag.clothes}}</p> 
+  </ion-col>
+  </ion-row> 
+  </div>
+  </div>
 </ion-list> 
 <ion-content>
     

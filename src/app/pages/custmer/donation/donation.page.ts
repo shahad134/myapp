@@ -12,8 +12,6 @@ import { NgForm } from '@angular/forms';
 })
 
 export class DonationPage implements OnInit {
-
-  //donations_info: Donations_info ;
   donations_info: Donations_info = new Donations_info ;
   constructor(
     private alertService: AlertService,
@@ -24,18 +22,9 @@ export class DonationPage implements OnInit {
 
   ) { }
 
-  
   ngOnInit() {
-   
   }
-
-
   item_qty=[1];
-
-// let f1:furniture={
-// type:form.value.type,
-// number:form.value.number
-// }
   furniture(form: NgForm){
     
 this.furniture_information.push(form.value.type)
@@ -89,36 +78,6 @@ miscellaneous(form: NgForm){
     this.item_qty.pop();
     console.log(this.furniture_information,this.clothes_information,this.dishes_information,this.baby_things_information,this.luxuries_information,this.accessories_and_mobiles_information,this.medical_devices_information,this.miscellaneous_information)
   }
- //electrical_tools
-  
-  // add(){//add
-  //   this.item_qty.push(2)
-  //   console.log(this.furniture_information)
-  // }
-  // remove(){//add
-  //   this.item_qty.pop();
-  //   console.log(this.furniture_information)
-  // }
-  
-  // ionViewWillEnter() {
-  //     this.httpService.makeGet('auth/receive_donation').subscribe(
-  //       donations_info => {
-  //         this.donations_info = donations_info
-  //         if(!this.donations_info){
-  //           this.donations_info = {
-  //             furniture :'',
-  //             clothes :''
-  //           }
-  //         }
-  //       },
-  //       error => {
-  //         console.log(error);
-  //       },
-  //       () => {
-          
-  //       }
-  //     );
-  //   }
  
   furniture_information=[]
   clothes_information=[]
@@ -133,7 +92,7 @@ miscellaneous(form: NgForm){
   submit(){
 
     this.donations_info.furniture=this.furniture_information.toString().replace(/"/g,"");
-    this.donations_info.clothes=this.clothes_information.toString() 
+    this.donations_info.clothes=this.clothes_information.toString();
     this.donations_info.dishes=this.dishes_information.toString();
     this.donations_info.electrical_tools=this.electrical_tools_information.toString();
     this.donations_info.baby_things=this.baby_things_information.toString();
@@ -153,12 +112,9 @@ miscellaneous(form: NgForm){
     this.httpService.post( 'auth/donations', data).subscribe(
       data => {
         this.alertService.presentToast("تم حفظ البيانات بنجاح");
-      
-      
       },
       error => {
         console.log(error.error);
-        
       },
       () => {
         this.modalController.dismiss();
