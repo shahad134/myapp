@@ -1,27 +1,14 @@
-
-    <!-- <ion-item *ngFor="let entry of home_furniture" >
-      <ion-select  >
-        <ion-select-option>{{entry.val}}</ion-select-option>
-      </ion-select>
-      <ion-input slot="end">{{entry.isChecked}}</ion-input>
-      <ion-input slot="end">{{entry.isChecked}}</ion-input>
-    </ion-item>
-  </ion-list>  -->
 <ion-header>
   <ion-toolbar>
-    <ion-title dir='rtl'>قائمة التبرعات</ion-title>
+    <ion-title >قائمة التبرعات</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content [scrollEvents]="true"
-(ionScrollStart)="logScrollStart()"
-(ionScroll)="logScrolling($event)"
-(ionScrollEnd)="logScrollEnd()">
-  <!-- <ion-label color="primary" floating>معلومات الذكور والإناث التابعين</ion-label> -->
+<ion-content>
   <ion-item  dir ='rtl' *ngFor="let entry of item_qty">
     <form #form="ngForm" (ngSubmit)="furniture(form)" method="post">
-      <ion-item>
-        <ion-label color="primary" floating>الاثاث المنزلي</ion-label>
-      </ion-item>
+      <ion-list>
+        <ion-label  color="primary" class='label' >الاثاث المنزلي</ion-label>
+      </ion-list>
       <ion-item>
         <ion-input ngModel name='type' placeholder="النوع"></ion-input>
       </ion-item>
@@ -29,21 +16,20 @@
         <ion-input ngModel name='number' placeholder="العدد "></ion-input>
       </ion-item>
       <ion-item>
-        <ion-button type="submit" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+        <ion-button type="submit" mode="ios"  expand="block" color="medium" class="roundedInput8px ion-margin-top" >
           حفظ 
         </ion-button>
-        <ion-button (click)="add()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+        <ion-button (click)="add()" mode="ios"  expand="block" color="medium " class="roundedInput8px ion-margin-top" >
           إضافة 
         </ion-button>
       <div *ngIf="entry != 1">
-        <ion-button (click)="remove()" mode="ios"  expand="block" color="green" class="roundedInput8px ion-margin-top" >
+        <ion-button (click)="remove()" mode="ios"  expand="block" color="light" class="roundedInput8px ion-margin-top" >
           حذف 
         </ion-button>
       </div>
       </ion-item>
     </form>
   </ion-item>
-  
   <ion-item  dir='rtl' *ngFor="let entry of item_qty">
     <form #form="ngForm" (ngSubmit)="clothes(form)" method="post">
       <ion-item dir='rtl'>

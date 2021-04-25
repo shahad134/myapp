@@ -55,6 +55,20 @@ export class AuthService {
       catchError(this.handleError('login', []))
     );
   }
+  // logout() {
+  //   const headers = new HttpHeaders({
+  //     'Authorization': this.token["token_type"]+" "+this.token["access_token"]
+  //   });
+  //   return this.http.get(this.env.API_URL + 'auth/logout', { headers: headers })
+  //   .pipe(
+  //     tap(data => {
+  //       this.storage.remove("token");
+  //       this.isLoggedIn = false;
+  //       delete this.token;
+  //       return data;
+  //     })
+  //   )
+  // }
   user(): Observable<any>{
     return this.http.get<User>(this.env.API_URL + 'auth/user')
     .pipe(

@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+    --ion-color-white: #ffffff;
+}
+
+
+.ion-color-white {
+    --ion-color-base: var(--ion-color-white);
+ 
+}
