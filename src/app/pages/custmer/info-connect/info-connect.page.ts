@@ -27,7 +27,6 @@ export class InfoConnectPage implements OnInit {
   
   submit(){
     this.info_connect.birth_date = moment(this.info_connect.birth_date).format("YYYY-MM-DD");
-
     let data = {
       info_connect:this.info_connect
     }
@@ -38,7 +37,7 @@ export class InfoConnectPage implements OnInit {
       },
       error => {
         console.log(error.error);
-        
+         
       },
       () => {
         this.modalController.dismiss();

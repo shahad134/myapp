@@ -3,18 +3,21 @@
     <ion-title dir='rtl'>معلومات التواصل</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content   [scrollEvents]="true"
-(ionScrollStart)="logScrollStart()"
-(ionScroll)="logScrolling($event)"
-(ionScrollEnd)="logScrollEnd()">
+<ion-content  >
 <ion-list dir='rtl'>
-  <ion-label color="primary" floating> أسم من يسلم الطلب</ion-label> </ion-list>
+  <ion-col>
+    <ion-row>
+      <ion-text color="primary" floating> اسم من يسلم الطلب</ion-text>
+    </ion-row>
+   
+  </ion-col>
+   </ion-list>
  <ion-item>
   <ion-input [(ngModel)]="info_connect.name"></ion-input>
 </ion-item>
 <ion-item>
   <ion-input  type='number' [(ngModel)]="info_connect.numberphone"></ion-input>
-</ion-item>
+</ion-item>  
 <ion-item>
   <ion-datetime  [(ngModel)]="info_connect.birth_date" min="2021-01-01" max="2040-01-01" displayFormat="YYYY MM DD"></ion-datetime>
 </ion-item>

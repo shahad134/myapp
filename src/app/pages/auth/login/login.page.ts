@@ -1,24 +1,11 @@
-// import { Component, OnInit } from '@angular/core';
 
-// @Component({
-//   selector: 'app-login',
-//   templateUrl: './login.page.html',
-//   styleUrls: ['./login.page.scss'],
-// })
-// export class LoginPage implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// }
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
 import { RegisterPage } from '../register/register.page';
 import { AuthService } from 'src/app/services/auth.service';
 import { AlertService } from 'src/app/services/alert.service';
+import { RestPage } from 'src/app/pages/custmer/rest/rest.page'
 
 @Component({
   selector: 'app-login',
@@ -79,5 +66,11 @@ export class LoginPage implements OnInit {
         this.navCtrl.navigateRoot(this.rot);
       }
     );
+  }
+  async showForgetPassword(){
+    const forgetModal = await this.modalController.create({
+      component: RestPage,
+    });
+    return await forgetModal.present();
   }
 }

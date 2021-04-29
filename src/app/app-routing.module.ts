@@ -47,6 +47,14 @@ const routes: Routes = [
   {
     path: 'select-location',
     loadChildren: () => import('./pages/custmer/select-location/select-location.module').then( m => m.SelectLocationPageModule)
+  },
+  // {
+  //   path: 'custmer',
+  //   loadChildren: () => import('./pages/custmer/custmer.module').then( m => m.CustmerPageModule)
+  // },
+  {
+    path: 'rest',
+    loadChildren: () => import('./pages/custmer/rest/rest.module').then( m => m.RestPageModule)
   }
 ];
 

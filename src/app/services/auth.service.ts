@@ -116,6 +116,11 @@ export class AuthService {
       return of(result as T);
     };
   }
+  reset(email: String) {
+    return this.http.post(this.env.API_URL + 'password/create',
+      {email: email}
+    )
+  }
 }
 
   
