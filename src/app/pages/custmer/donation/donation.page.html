@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title >قائمة التبرعات</ion-title>
   </ion-toolbar>
@@ -246,4 +246,87 @@
     ارسال
   </ion-button>
   
+</ion-content> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title >قائمة التبرعات</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item dir ='rtl' *ngFor="let entry of item_qty">
+    <ion-item>
+      <form #form="ngForm" (ngSubmit)="addToArray(form)" method="post">
+        <ion-label>قائمة التبرعات</ion-label>
+          <ion-select ngModel name="donationList" placeholder="اختر تصنيف التبرع" interface="action-sheet">
+            <ion-select-option value="furniture">الاثاث المنزلي</ion-select-option>
+            <ion-select-option value="clothes">ملابس</ion-select-option>
+            <ion-select-option value="dishes">الأواني المنزلية</ion-select-option>
+            <ion-select-option value="electrical_tools">الأدوات الكهربائية</ion-select-option>
+            <ion-select-option value="baby_things">مستلزمات الأطفال</ion-select-option>
+            <ion-select-option value="luxuries">الكماليات</ion-select-option>
+            <ion-select-option value="accessories_and_mobiles">إكسسوارات نسائيه وجوالات</ion-select-option>
+            <ion-select-option value="medical_devices">أجهزة طبية</ion-select-option>
+            <ion-select-option value="miscellaneous">متفرقات</ion-select-option>
+          </ion-select>
+
+          <ion-item>
+            <ion-input ngModel name='type' placeholder="النوع"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input ngModel name='number' placeholder="العدد" ></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-button type="submit" mode="ios"  expand="block" color="medium" class="roundedInput8px ion-margin-top" >
+            حفظ 
+          </ion-button>
+        <ion-button (click)="add()" mode="ios"  expand="block" color="medium " class="roundedInput8px ion-margin-top" >
+            إضافة صنف آخر 
+          </ion-button>
+        <div *ngIf="entry != 1">
+          <ion-button (click)="remove()" mode="ios"  expand="block" color="light" class="roundedInput8px ion-margin-top" >
+            حذف 
+          </ion-button>
+        </div>
+        </ion-item>
+      </form>
+    </ion-item>
+  </ion-item>
+  <div class="button-bottom">
+    <ion-button (click)="submit()" mode="ios" expand="block"  color="medium" fill="outline" class="roundedInput8px ion-margin-top">
+    حفظ
+    </ion-button>
+  </div>
+  <!-- <ion-list dir='rtl'>
+    <ion-col>
+      <ion-row>
+        <ion-text color="primary" floating> اسم من يسلم الطلب</ion-text>
+      </ion-row>
+    </ion-col>
+     </ion-list> -->
+     <div dir="ltr">
+     <br>
+   <ion-item>
+    <ion-input [(ngModel)]="info_connect.name"  placeholder="اسم من يسلم الطلب"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input  type='number' [(ngModel)]="info_connect.numberphone" placeholder="رقم الجوال"></ion-input>
+  </ion-item>  
+  <ion-item>
+    <ion-datetime  dir="ltr" [(ngModel)]="info_connect.birth_date" min="2021-01-01" max="2040-01-01" displayFormat="YYYY MM DD" placeholder="الوقت"></ion-datetime>
+  </ion-item>
+  <ion-item  >
+    <ion-segment color="tertiary" [(ngModel)]="info_connect.time" >
+      <ion-segment-button  value='صباح'>
+        <ion-label>صباح</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value='مساء' >
+        <ion-label>مساء</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-item>
+</div>
+  <ion-button (click)="submit()" mode="ios" expand="block"  color="green" fill="outline" class="ion-margin-top" >ارسال</ion-button>
+   
 </ion-content>

@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {Donations_info} from 'src/app/models/donations';
+import {Connect_info} from 'src/app/models/connectinfo';
 import { AlertService } from 'src/app/services/alert.service';
 import { EnvService } from '../../../services/env.service';
 import{ HttpServiceService}  from '../../../services/http-service.service';
 import { ModalController, NavController } from '@ionic/angular';
 import { NgForm } from '@angular/forms';
+import * as moment from 'moment';
+
 @Component({
   selector: 'app-donation',
   templateUrl: './donation.page.html',
@@ -12,6 +15,8 @@ import { NgForm } from '@angular/forms';
 })
 
 export class DonationPage implements OnInit {
+  info_connect: Connect_info = new Connect_info ;
+
   donations_info: Donations_info = new Donations_info ;
   constructor(
     private alertService: AlertService,
@@ -118,25 +123,32 @@ miscellaneous(form: NgForm){
       },
       () => {
         this.modalController.dismiss();
-        this.navCtrl.navigateForward('/info-connect');
-
-      
       }
     )
+    }
+    submitt(){
+      this.info_connect.birth_date = moment(this.info_connect.birth_date).format("YYYY-MM-DD");
+      let data = {
+        info_connect:this.info_connect
+      }
+      console.log(this.info_connect);
+      this.httpService.post('auth/infoconnects',data).subscribe(
+        data => {
+          this.alertService.presentToast("تم حفظ البيانات بنجاح");
+        },
+        error => {
+          console.log(error.error);
+           
+        },
+        () => {
+          this.modalController.dismiss();
+          
+        
+        }
+   
+   
+        )
+      
+    }
+  
   }
-  // public home_furniture  = [
-  //   { val: 'اسرة', isChecked: 0 },
-  //   { val: 'كنب', isChecked: 0 }, 
-  //   { val: 'مجلس', isChecked: 0 },
-  //   { val: 'كرسي', isChecked: 0 },
-    // { val: 'طاولة', isChecked: 0 },
-    // { val: 'أبجورة', isChecked: 0 },
-    // { val: 'ورد صناعي', isChecked: 0 },
-    // { val: 'شماعة', isChecked: 0 },
-    // { val: 'دواليب', isChecked: 0 }
-  // ];
-}
-// interface furniture{
-//   type:string,
-//   number:number
-// }
