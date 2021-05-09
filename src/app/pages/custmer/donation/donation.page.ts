@@ -142,7 +142,7 @@ miscellaneous(form: NgForm){
         },
         () => {
           this.modalController.dismiss();
-          
+          this.navCtrl.navigateForward('/info-connect');
         
         }
    
