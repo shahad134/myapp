@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title >قائمة التبرعات</ion-title>
+  
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -240,8 +241,6 @@
     </form>
   </ion-item>
 
-  
- 
   <ion-button (click)="submit()" mode="ios" expand="block"  color="green" fill="outline" class="ion-margin-top" >
     ارسال
   </ion-button>
@@ -281,7 +280,7 @@
           <ion-button type="submit" mode="ios"  expand="block" color="medium" class="roundedInput8px ion-margin-top" >
             حفظ 
           </ion-button>
-        <ion-button (click)="add()" mode="ios"  expand="block" color="medium " class="roundedInput8px ion-margin-top" >
+        <ion-button  type="submit" (click)="add()" mode="ios"  expand="block" color="medium " class="roundedInput8px ion-margin-top" >
             إضافة صنف آخر 
           </ion-button>
         <div *ngIf="entry != 1">
@@ -298,35 +297,5 @@
     حفظ
     </ion-button>
   </div>
- <ion-list dir='rtl'>
-    <ion-col>
-      <ion-row>
-        <ion-text color="primary" floating> اسم من يسلم الطلب</ion-text>
-      </ion-row>
-    </ion-col>
-     </ion-list> -->
-     <!-- <div dir="ltr">
-     <br>
-   <ion-item>
-    <ion-input [(ngModel)]="info_connect.name"  placeholder="اسم من يسلم الطلب"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input  type='number' [(ngModel)]="info_connect.numberphone" placeholder="رقم الجوال"></ion-input>
-  </ion-item>  
-  <ion-item>
-    <ion-datetime  dir="ltr" [(ngModel)]="info_connect.birth_date" min="2021-01-01" max="2040-01-01" displayFormat="YYYY MM DD" placeholder="الوقت"></ion-datetime>
-  </ion-item>
-  <ion-item  >
-    <ion-segment color="tertiary" [(ngModel)]="info_connect.time" >
-      <ion-segment-button  value='صباح'>
-        <ion-label>صباح</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value='مساء' >
-        <ion-label>مساء</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-item>
-</div>
-  <ion-button (click)="submit()" mode="ios" expand="block"  color="green" fill="outline" class="ion-margin-top" >ارسال</ion-button>
-   
+ 
 </ion-content> -->

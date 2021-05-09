@@ -107,32 +107,12 @@ miscellaneous(form: NgForm){
     this.donations_info.miscellaneous=this.miscellaneous_information.toString();
     //this.donations_info.birth_date=this.birth_date_information;
 
-    let data = {
-      donations_info:this.donations_info
-    }
+  
    
-    //this.donations_info.furniture=this.home_furniture;
-
-    console.log(this.donations_info)
-    this.httpService.post( 'auth/donations', data).subscribe(
-      data => {
-        this.alertService.presentToast("تم حفظ البيانات بنجاح");
-      },
-      error => {
-        console.log(error.error);
-      },
-      () => {
-        this.modalController.dismiss();
-      }
-    )
-    }
-    submitt(){
-      this.info_connect.birth_date = moment(this.info_connect.birth_date).format("YYYY-MM-DD");
       let data = {
-        info_connect:this.info_connect
+        donations_info:this.donations_info
       }
-      console.log(this.info_connect);
-      this.httpService.post('auth/infoconnects',data).subscribe(
+      this.httpService.post('auth/donations',data).subscribe(
         data => {
           this.alertService.presentToast("تم حفظ البيانات بنجاح");
         },
