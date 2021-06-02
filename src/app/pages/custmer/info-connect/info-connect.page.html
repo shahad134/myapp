@@ -5,18 +5,13 @@
 </ion-header>
 <ion-content  >
 <ion-list dir='rtl'>
-  <ion-col>
-    <ion-row>
-      <ion-text color="primary" floating> اسم من يسلم الطلب</ion-text>
-    </ion-row>
-  </ion-col>
-   </ion-list>
+  <ion-label color="primary" floating> أسم من يسلم الطلب</ion-label> </ion-list>
  <ion-item>
   <ion-input [(ngModel)]="info_connect.name"></ion-input>
 </ion-item>
 <ion-item>
   <ion-input  type='number' [(ngModel)]="info_connect.numberphone"></ion-input>
-</ion-item>  
+</ion-item>
 <ion-item>
   <ion-datetime  [(ngModel)]="info_connect.birth_date" min="2021-01-01" max="2040-01-01" displayFormat="YYYY MM DD"></ion-datetime>
 </ion-item>
@@ -31,6 +26,16 @@
       <!-- <ion-icon name="heart"></ion-icon> -->
     </ion-segment-button>
   </ion-segment>
+ 
 </ion-item>
-<ion-button (click)="submit()" mode="ios" expand="block"  color="green" fill="outline" class="ion-margin-top" >ارسال</ion-button>
+<ion-button href="/select-location" mode="ios" expand="block" color="medium" fill="outline" class="roundedInput8px ion-margin-top">
+  اختيار الموقع
+</ion-button>
+
+<div class="card-footer">
+  <ion-button (click)="submit()" href="home" mode="ios" expand="block" color="medium" fill="outline" class="roundedInput8px ion-margin-top button-bottom">
+    إرسال
+  </ion-button>
+</div>
+
 </ion-content>

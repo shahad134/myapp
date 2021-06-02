@@ -20,9 +20,10 @@ export class SelectLocationPage implements OnInit {
       const { coords } = res;
       this.addMap(coords.latitude, coords.longitude);
     });
-  }
+  }  
 
   ngOnInit() {
+
   }
 
 

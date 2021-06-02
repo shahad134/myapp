@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title >قائمة التبرعات</ion-title>
   
@@ -246,7 +246,7 @@
   </ion-button>
   
 </ion-content>
-<!-- <ion-header>
+ <ion-header>
   <ion-toolbar>
     <ion-title >قائمة التبرعات</ion-title>
   </ion-toolbar>
@@ -299,3 +299,50 @@
   </div>
  
 </ion-content> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title >قائمة التبرعات</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [formGroup]="addmore" dir="rtl">
+    <ng-container formArrayName="lessons">
+      <ng-container *ngFor="let lessonForm of lessons.controls; let i = index">
+        <div [formGroupName]="i">
+          <ion-select formControlName="kind" placeholder="اختر تصنيف التبرع" interface="action-sheet" expand="block">
+            <ion-select-option value="furniture">الاثاث المنزلي</ion-select-option>
+            <ion-select-option value="clothes">ملابس</ion-select-option>
+            <ion-select-option value="dishes">الأواني المنزلية</ion-select-option>
+            <ion-select-option value="electrical_tools">الأدوات الكهربائية</ion-select-option>
+            <ion-select-option value="baby_things">مستلزمات الأطفال</ion-select-option>
+            <ion-select-option value="luxuries">الكماليات</ion-select-option>
+            <ion-select-option value="accessories_and_mobiles">إكسسوارات نسائية وجوالات</ion-select-option>
+            <ion-select-option value="medical_devices">أجهزة طبية</ion-select-option>
+            <ion-select-option value="miscellaneous">متفرقات</ion-select-option>
+          </ion-select>
+          <ion-input formControlName="type" placeholder="النوع" expand="block"></ion-input>
+          <ion-input formControlName='number' placeholder="العدد" expand="block"></ion-input>
+
+          <ion-button (click)="addOrder(i)" mode="ios" color="medium " class="roundedInput8px ion-margin-top button">إضافة صنف آخر</ion-button>
+          <ion-button (click)="deleteOrder(i)" mode="ios" color="medium" class="roundedInput8px ion-margin-top button">حذف</ion-button>
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <div [hidden]="!inboundClick" (click)="inboundClick = !inboundClick">
+      <ion-button (click)="add()" id="addButton" mode="ios"  expand="block" color="light" class="roundedInput8px ion-margin-top">إضافة صنف</ion-button>
+    </div>
+      <!-- <ion-button (click)="save()">save</ion-button> -->
+<!-- 
+    <p>
+      Form Status: {{ addmore.value | json }}
+    </p> -->
+  </div>
+
+  <div class="card-footer">
+    <ion-button (click)="submit()" id="send1" mode="ios" expand="block" color="medium" fill="outline" class="roundedInput8px ion-margin-top button-bottom">
+      إرسال
+    </ion-button>
+  </div>
+</ion-content>
