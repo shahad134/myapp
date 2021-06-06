@@ -37,9 +37,12 @@ export class AdminPage implements OnInit {
         if(this.donations_info[i] == "null"){
        this.donations_info[i] ={
             furniture:'',
-            clothes :''
+            clothes :'',
+            electrical_tools:'',
+            dishes:'',
+            baby_things:'',
        }
-       
+    
        JSON.stringify(donations_info[i])
 
       
