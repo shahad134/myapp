@@ -55,6 +55,10 @@ const routes: Routes = [
   {
     path: 'rest',
     loadChildren: () => import('./pages/custmer/rest/rest.module').then( m => m.RestPageModule)
+  },
+  {
+    path: 'request',
+    loadChildren: () => import('./pages/custmer/request/request.module').then( m => m.RequestPageModule)
   }
 ];
 

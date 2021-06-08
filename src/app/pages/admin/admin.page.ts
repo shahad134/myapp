@@ -22,7 +22,7 @@ export class AdminPage implements OnInit {
   ) { }
 
   ngOnInit() {
-  }
+  } 
  //donation :any;
  
   ionViewWillEnter() {

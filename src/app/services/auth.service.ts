@@ -5,10 +5,15 @@ import { Observable, of } from 'rxjs';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { EnvService } from './env.service';
 import { User } from '../models/user';
+// 
+import {Connect_info } from '../models/connectinfo';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  // connect_info() {
+  //   throw new Error('Method not implemented.');
+  // }
   isLoggedIn = true;
   token:any;
   headers = new HttpHeaders();
@@ -75,6 +80,15 @@ export class AuthService {
       tap(user => {
         console.log(user)
         return user;
+      })
+    )
+  }
+  connect_info():Observable<any>{
+    return this.http.get<Connect_info>(this.env.API_URL + 'auth/receive_infoconnect')
+    .pipe(
+      tap(connect_info => {
+        console.log(connect_info)
+        return connect_info;
       })
     )
   }
