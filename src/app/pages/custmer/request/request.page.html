@@ -17,27 +17,17 @@
         </ion-col>
     </ion-row>
 </ion-grid>
-<button ion-button >
-<ion-slide options="options" slider="data.slider" >
-  <ion-slide-page ng-repeat="slide in slides" class="white-bg">
-    <div>
-      <div *ngIf="connect_info != undefined">
-     {{connect_info["time"]  }} 
-    </div></div>
-<span *ngFor ="let tag of donations_info">
-  <ion-item *ngIf="tag !">
-    <!-- <div>
-      <div *ngIf="user!= undefined">
-    welcome1 {{user["name"]  }} 
-  </div>
-   </div> -->
+<ion-list >
+   
+<ion-list *ngFor ="let tag of donations_info | slice:1">
+  <ion-item *ngIf="tag !"> 
+
    <div>
   <ion-row>
   <ion-col>
   <p>  {{tag.furniture  === 'null' ? '' :tag.furniture }}</p>
   </ion-col>
   </ion-row>
-
 </div>
   <div>
   <ion-row>
@@ -97,9 +87,7 @@
           </ion-col>
             </ion-row>
           </div>
-  </ion-item></span >
-</ion-slide-page>
-</ion-slide >
-</button>
+  </ion-item></ion-list >
+</ion-list>
 </ion-content>
     

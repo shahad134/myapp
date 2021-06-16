@@ -8,12 +8,16 @@ import { InfoConnectPageRoutingModule } from './info-connect-routing.module';
 
 import { InfoConnectPage } from './info-connect.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InfoConnectPageRoutingModule
+    InfoConnectPageRoutingModule,
+
+    ReactiveFormsModule,
   ],
   declarations: [InfoConnectPage]
 })
