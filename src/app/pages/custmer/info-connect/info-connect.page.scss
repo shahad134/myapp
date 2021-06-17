@@ -1,14 +1,12 @@
-.info{
-    font-size:.88cm;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    margin-top: 30px;
+.grid1 {
+    height: 85%;
+    padding: 0px;
 }
-.button-bottom{
-    position: fixed;
-    left: 0;
-    bottom: 10px;
-    right: 0;
+
+.row1 {
+    height: 170%;
+    margin-top: -11cm;
+    background: -moz-linear-gradient(45deg, rgba(227, 227, 231, 0.973) 0%, rgb(255, 255, 255) 100%);
+    background: -webkit-linear-gradient(45deg, rgb(233, 230, 230) 0%, rgba(245, 235, 235, 0.904) 100%);
+    background: linear-gradient(45deg, rgb(192, 186, 186) 0%, rgba(255, 254, 254, 0.856) 100%);
 }

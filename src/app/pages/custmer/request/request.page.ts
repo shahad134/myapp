@@ -21,7 +21,8 @@ export class RequestPage implements OnInit {
     connect_info:Connect_info ;
     user: User;
     connect_inlfo=[];
-    donations_info:Donations_info =[{furniture:'',clothes:'',electrical_tools:'',dishes:'',baby_things:'',luxuries:'',accessories_and_mobiles:'',medical_devices:'',miscellaneous:''}]
+    donations_info:Donations_info 
+    // =[{furniture:'',clothes:'',electrical_tools:'',dishes:'',baby_things:'',luxuries:'',accessories_and_mobiles:'',medical_devices:'',miscellaneous:''}]
      ;  
     // donations_info=[]
     constructor(
@@ -48,7 +49,7 @@ export class RequestPage implements OnInit {
         for(let i =0; i <= donations_info.length; i++){
          console.log(donations_info[i]);}
       })
-       //this.put(this.donations_info.furniture,this.furniture)
+    //    this.put(this.donations_info.furniture,this.furniture)
     //    console.log(donations_info);
     //  for(let i =0; i <= donations_info.length; i++){
     //   console.log(donations_info[i]);

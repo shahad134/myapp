@@ -105,10 +105,10 @@ export class InfoConnectPage implements OnInit {
   }
 
   onSubmit(){
-    this.info_connect.birth_date = moment(this.info_connect.birth_date).format("YYYY-MM-DD");
+    this.info_connect.birth_date = moment(this.info_connect.birth_date).format("YYYY-MM-DD")
     this.info_connect.name = this.addmore.get('name').value
     this.info_connect.numberphone = this.addmore.get('numberphone').value
-    this.info_connect.birth_date = this.addmore.get('birth_date').value
+    // this.info_connect.birth_date = this.addmore.get('birth_date').value
     this.info_connect.time = this.addmore.get('time').value
     this.info_connect.neighborhood_name = this.addmore.get('neighborhood_name').value
     this.info_connect.street_name = this.addmore.get('street_name').value

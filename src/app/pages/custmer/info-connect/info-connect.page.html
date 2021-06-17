@@ -8,8 +8,18 @@
 </ion-header>
 
 <ion-content>
-
-  <div [formGroup]="addmore" dir="rtl">
+  <ion-grid class="grid1">
+    <ion-row class="row1">
+        <ion-col>
+        </ion-col>
+    </ion-row>
+    <ion-row class="row2">
+        <ion-col>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+<ion-list>
+  <div class="contaier-login"  [formGroup]="addmore" dir="rtl">
     <!-- Name: <ion-input formControlName="name"  placeholder="Enter Name"></ion-input> -->
     <ion-input formControlName="name"  placeholder="اسم من يسلم الطلب"></ion-input>
     <ion-input formControlName='numberphone'  placeholder="رقم جوال من يسلم الطلب"></ion-input>
@@ -34,5 +44,6 @@
     إرسال
   </ion-button> -->
   <ion-button (click)="onSubmit()" [disabled]="!addmore.valid" expand="block" color="medium" fill="outline" class="roundedInput8px ion-margin-top button-bottom">إرسال</ion-button>
+</ion-list>
 
 </ion-content>  
